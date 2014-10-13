@@ -1,14 +1,15 @@
 //Variables de asignación por valor
 //Variables de asignación por referencia
 
-function Pokemon(nombrePokemon, tipoPoke, vidaPoke, ataPoke)
+function Pokemon(nombrePokemon,vidaPoke, ataPoke)
 {
 	var estructuraPokemon =
 	{
 		nombre: nombrePokemon,
-		tipo: tipoPoke,
 		vida: vidaPoke,
-		ataque: ataPoke
+		ataque: ataPoke,
+		//Objetos dentro de Objetos
+		datos: {tipo: "Tierra", debilidad: "Fuego"}
 	// nombre: "Pikachu",
 	// tipo: "Electrico",
 	// via: 100,
@@ -24,7 +25,9 @@ var bulbasaur = Pokemon("Bulbasaur", "Tierra", 90, 50);
 // bulbasaur.tipo = "Tierra";
 // bulbasaur.vida = 90;
 
-document.write(bulbasaur.tipo);
+document.write(bulbasaur.datos.tipo);
+
+console.log(bulbasaur);
 
 
 //DOCUMENT OBJECT MODEL
